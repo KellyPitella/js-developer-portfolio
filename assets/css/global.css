@@ -8,12 +8,13 @@
     src: url('../fonts/neue-machina-regular.otf');
 }
 
-body {
-    background-color: #000;
-    color: #fff;
+body{
+    background-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 a {
+    font-size: 1rem;
     color: #fff;
     text-decoration: none;
 }
@@ -29,28 +30,33 @@ a:hover {
     border-radius: 1rem;
 }
 
+..main {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 1rem
+}
+
 .main::before,
 .main::after {
-    content: '';
-    background-image: url('../img/background.svg');
+    content: "";
+    background: linear-gradient(135deg,
+    #020617 0%,   /* Azul quase preto */
+    #020b2d 40%,  /* Azul navy profundo */
+    #000000 70%,  /* Centro bem escuro */
+    #020f4a 100%  /* Azul intenso */
+);
+
+    background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
     position: fixed;
     top: 0;
     left: 0;
-    width: 140vw;
-    height: 100vh;
-    z-index: -1;
-}
-
-.main::after {
-    content: '';
-    top: auto;
-    left: auto;
-    bottom: 0;
-    right: 0;
-    transform: rotate(180deg);
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca o fundo atrás do texto */
 }
 
 
