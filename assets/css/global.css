@@ -9,8 +9,9 @@
 }
 
 body{
-    background-color: #FFFFFF;
+    background-color: #000000;
     color: #FFFFFF;
+    min-height: 100vh;
 }
 
 a {
@@ -28,6 +29,7 @@ a:hover {
     padding: 1rem;
     border: 1px solid #fff;
     border-radius: 1rem;
+   
 }
 
 .main {
@@ -37,15 +39,14 @@ a:hover {
     border-radius: 1rem
 }
 
-.main::before,
-.main::after {
+.main::before {
     content: "";
     background: linear-gradient(135deg,
     #020617 0%,   /* Azul quase preto */
     #020b2d 40%,  /* Azul navy profundo */
     #000000 70%,  /* Centro bem escuro */
     #020f4a 100%  /* Azul intenso */
-);
+    );
 
     background-blend-mode: overlay;
     background-repeat: no-repeat;
@@ -62,12 +63,7 @@ a:hover {
 
 @media only screen and (min-width: 768px) {
     .main {
-        max-width: 1024px;
-        margin: 1rem auto;
-    }
-
-    .main::before,
-    .main::after {
-        width: 70vw;
+        max-width: 1024px;;
+        margin:  2rem auto;
     }
 }
